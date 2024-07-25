@@ -4,4 +4,23 @@ body {
 }
 #pokerCard {
   background-color: white;
+  border-radius: 5px;
+  height: 600px;
+  position: relative;
+  box-shadow: 15px 18px 4px black;
+  margin-top: 20px;
+}
+#pokerCardIcon {
+  font-size: 90px;
+}
+#pokerCardNumber {
+  font-size: 180px;
+  text-align: center;
+}
+#samePokerIcon {
+  font-size: 90px;
+  position: absolute;
+  bottom: -25px;
+  right: 10px;
+  transform: rotate(180deg);
 }
