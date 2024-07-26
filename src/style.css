@@ -9,6 +9,8 @@ body {
   position: relative;
   box-shadow: 15px 18px 4px black;
   margin-top: 20px;
+  transform: scale(1);
+  transition: transform 0.4s;
 }
 #pokerCardIcon {
   font-size: 90px;
@@ -23,4 +25,8 @@ body {
   bottom: -25px;
   right: 10px;
   transform: rotate(180deg);
+}
+#pokerCard:hover {
+  transform: scale(1.1);
+  transition: transform 0.4s;
 }

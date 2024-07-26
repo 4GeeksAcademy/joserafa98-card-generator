@@ -42,9 +42,12 @@ window.onload = function() {
     document.querySelector("#samePokerIcon").innerHTML = selectedIcon.icon;
     document.querySelector("#samePokerIcon").style.color = selectedIcon.color;
   }
-
-  pokerCardRandom();
-  pokerCardIcon();
+  function generateNewCard() {
+    pokerCardRandom();
+    pokerCardIcon();
+  }
+  generateNewCard();
+  setInterval(generateNewCard(), 3000);
 };
 
 //pseudocodigo:
