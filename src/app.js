@@ -22,26 +22,29 @@ window.onload = function() {
       "K",
       "A"
     ];
-    let pokerCardNumber = Math.ceil(Math.random() * pokerCardOptions.length);
+    let randomResult = Math.floor(Math.random() * pokerCardOptions.length);
+    let pokerCardNumber = pokerCardOptions[randomResult];
     document.querySelector("#pokerCardNumber").innerHTML = pokerCardNumber;
   }
-
   function pokerCardIcon() {
-    let pokerCardIcons = ["♦", "♥", "♠", "♣"];
+    let pokerCardIcons = [
+      { icon: "♦", color: "red" },
+      { icon: "♥", color: "red" },
+      { icon: "♠", color: "black" },
+      { icon: "♣", color: "black" }
+    ];
     let pokerCardIconsRandom = Math.floor(
       Math.random() * pokerCardIcons.length
     );
-    let selectedIcons = pokerCardIcons[pokerCardIconsRandom];
-    document.querySelector("#pokerCardIcon").innerHTML = selectedIcons;
-    return selectedIcons;
+    let selectedIcon = pokerCardIcons[pokerCardIconsRandom];
+    document.querySelector("#pokerCardIcon").innerHTML = selectedIcon.icon;
+    document.querySelector("#pokerCardIcon").style.color = selectedIcon.color;
+    document.querySelector("#samePokerIcon").innerHTML = selectedIcon.icon;
+    document.querySelector("#samePokerIcon").style.color = selectedIcon.color;
   }
-  function pokerCardIcon2() {
-    let icon = pokerCardIcon();
-    document.querySelector("#samePokerIcon").innerHTML = icon;
-  }
+
   pokerCardRandom();
   pokerCardIcon();
-  pokerCardIcon2();
 };
 
 //pseudocodigo:
