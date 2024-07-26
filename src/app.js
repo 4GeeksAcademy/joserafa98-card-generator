@@ -42,9 +42,23 @@ function pokerCardRandom() {
   document.querySelector("#samePokerIcon").innerHTML = selectedIcon.icon;
   document.querySelector("#samePokerIcon").style.color = selectedIcon.color;
 }
+function applyCardSize() {
+  let width = document.querySelector("#addwidth").value;
+  let height = document.querySelector("#addHeight").value;
+  let pokerCard = document.querySelector("#pokerCard");
+
+  if (width > 400) {
+    pokerCard.style.width = width + "px";
+  } else {
+    alert("Por favor, pon un numero mayor");
+  }
+  if (height > 600) {
+    pokerCard.style.height = height + "px";
+  } else {
+    alert("Por favor, pon un numero mayor");
+  }
+}
 document.querySelector("#newCard").addEventListener("click", pokerCardRandom);
-//pseudocodigo:
-//1.generar numeros al azar
-//2. imprimirlo en el html
-//3. generar figuras al azar
-//juntarlas
+document
+  .querySelector("#newSizeButton")
+  .addEventListener("click", applyCardSize);

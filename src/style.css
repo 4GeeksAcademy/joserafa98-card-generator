@@ -2,10 +2,14 @@
 body {
   background-color: green;
 }
+#title {
+  text-align: center;
+}
 #pokerCard {
   background-color: white;
   border-radius: 5px;
   height: 600px;
+  width: 400px;
   position: relative;
   box-shadow: 15px 18px 4px black;
   margin-top: 20px;
@@ -25,6 +29,15 @@ body {
   bottom: -25px;
   right: 10px;
   transform: rotate(180deg);
+}
+#newCard {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+#customSizeCard {
+  margin: 50px;
+  border-radius: 15px;
 }
 #pokerCard:hover {
   transform: scale(1.1);

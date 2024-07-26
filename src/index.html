@@ -22,17 +22,56 @@
   <body>
     <div class="container">
       <div class="row">
+        <div class="col-12 bg-light mx-auto">
+          <h1>♦ ♥ ♠ ♣Poker Card Generator♦ ♥ ♠ ♣</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <button
+            type="button"
+            class="btn btn-danger W-50 mx-auto"
+            id="newCard"
+          >
+            LET'S RANDOMIZE
+          </button>
+        </div>
+        <div class="col-4"></div>
+      </div>
+      <div class="row">
         <div class="col-4"></div>
         <div class="col-4 bg-light position-relative" id="pokerCard">
           <p id="pokerCardIcon">♦</p>
           <p id="pokerCardNumber">J</p>
           <p id="samePokerIcon">♦</p>
         </div>
-        <div class="col-4">
-          <button type="button" class="btn btn-danger W-50" id="newCard">
-            LET'S RANDOMIZE
-          </button>
+        <div class="col-4"></div>
+      </div>
+      <div class="row" id="customSizeCard">
+        <div class="col bg-light p-2">
+          <label for="addHeight">height</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Add the height"
+            aria-label="First name"
+            id="addHeight"
+          />
         </div>
+        <div class="col bg-light p-2">
+          <label for="addwidth">Width</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Add the width"
+            aria-label="Last name"
+            id="addwidth"
+          />
+        </div>
+        <button type="button" class="btn btn-danger" id="newSizeButton">
+          Adding Sizes
+        </button>
       </div>
     </div>
     <script
